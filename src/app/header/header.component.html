@@ -1,0 +1,51 @@
+<div class="d-flex row co  p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+
+    <div class="col-4">
+      <img class="mr-3" src="../../assets/logo.svg" alt="" width="200" height="50">
+    </div>
+    <div class="col-4">
+      <h1 class="font-color"> MQTT-DETECTION</h1>
+    </div>
+    <div class="col-4  input-align">
+      <div class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2"  type="number" placeholder="Driver Id" [(ngModel)]="id" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="onClickMe()">Search</button>
+      </div>
+    </div>
+</div>
+<br>
+
+<div class="d-flex row   text-white-50 rounded shadow-sm">
+
+  <div *ngIf="true" class="col-4 rounded shadow-sm">
+    <h2 class="font-color align-text"> CLIENTS</h2>
+    <section *ngIf="client!==null">
+      <div  *ngFor="let v of client">
+        <h6  class="font-color" >client-id - {{v.ClientID}}</h6>
+        <h6  class="font-color" >created-time - {{v.ConnectedAt}}</h6>
+        <h6  class="font-color" >keep-alive - {{v.Keepalive}}</h6>
+        <h6  class="font-color" >Node - {{v.Node}}</h6>
+      </div>
+    </section>
+  </div>
+  <div class="col-4 rounded shadow-sm">
+    <h2 class="font-color align-text"> SUBSCRIPTIONS</h2>
+    <section *ngIf="subscription!==null">
+      <div *ngFor="let v of subscription">
+        <h6  class="font-color" >client-id - {{v.ClientID}}</h6>
+        <h6  class="font-color" >Qos - {{v.Qos}}</h6>
+        <h6 class="font-color" >Topic -{{v.Topic}}</h6>
+      </div>
+    </section>
+  </div>
+  <div class="col-4 rounded shadow-sm">
+    <h2 class="font-color align-text"> SESSIONS</h2>
+    <section *ngIf="session!==null">
+      <div *ngFor="let v of session">
+        <h6  class="font-color" >client-id - {{v.ClientID}}</h6>
+        <h6  class="font-color" >created-time - {{v.CreatedAt}}</h6>
+        <h6  class="font-color" >Subscriptions - {{v.Subscriptions}}</h6>
+      </div>
+    </section>
+  </div>
+</div>

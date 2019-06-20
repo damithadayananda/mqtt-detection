@@ -1,0 +1,25 @@
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+
+.text-white-50 { color: rgba(0, 0, 0, .5); }
+
+.bg-purple { background-color: 	#FFFF33; }
+
+.lh-100 { line-height: 1; }
+.lh-125 { line-height: 1.25; }
+.lh-150 { line-height: 1.5; }
+
+.input-align{
+  padding-left: 100px;
+  padding-top: 7px;
+;
+}
+.align-text{
+  text-align: center;
+}
+.font-color{
+  color: #000000;
+}

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  idUrl: 'http://localhost:8080/getDetailById?id=',
+  allUrl: 'http://localhost:8080/getData',
+  refreshInterval: 60000,
 };
 
 /*

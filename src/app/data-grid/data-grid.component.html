@@ -1,0 +1,15 @@
+<ag-grid-angular
+  style="width: 100%; height: 700px;"
+  class="ag-theme-balham"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [enableSorting]="true"
+  [enableFilter]="true"
+  [pagination]="true"
+  [paginationPageSize]="200"
+  [overlayLoadingTemplate]="overlayLoadingTemplate"
+  (gridReady)="onGridReady($event)"
+  [isExternalFilterPresent]="isExternalFilterPresent.bind(this)"
+  [doesExternalFilterPass]="doesExternalFilterPass"
+>
+</ag-grid-angular>
